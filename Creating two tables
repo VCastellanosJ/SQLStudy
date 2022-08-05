@@ -1,0 +1,16 @@
+use learning; -- Selects the Schema or database
+create table Tickers( -- creating table with a name
+  Ticker_id int NOT NULL AUTO_INCREMENT, -- First column with function parameters
+  Ticker_Name varchar(8) NOT NULL, -- Second column with variable character data
+  PRIMARY KEY(Ticker_id) -- Marking the Primary Key
+  );
+  
+create table mugres_stocks2( -- creates table with name
+ mugre_id int NOT NULL autoincrement, -- Generates the first column
+ ticker_id int(8),                    -- Second column. Linked to the first
+ Price double,                        -- Third column
+ created_at datetime,                 -- Fourth column with date format
+ PRIMARY KEY (mugre_id)               -- Links to the first table
+  );
+  
+select * from tickers;                -- Verification that everything ran
